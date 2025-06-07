@@ -1,0 +1,22 @@
+As we know Python interpreter interprets statements from the first line of the python file ( .pyc file )
+
+Suppose we write
+
+def disp():
+	print("hello")
+
+now if we simply execute above file, there won't be any output.
+
+but if we add following line:
+
+disp()    # function call
+
+and execute , we'll get the output.
+
+Why it is so?
+
+
+
+Simple. Python sees def disp():, and simply reads the function, without executing it. A call to any function in this disp() e.g. "print("hello") "  is just a string. It is not run yet, and it does not matter what it is and where it is defined - it is just text.
+
+Only when python sees a function call, it starts executing the function and looks where functions are. 

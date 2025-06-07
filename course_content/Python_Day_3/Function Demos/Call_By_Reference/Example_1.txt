@@ -1,0 +1,13 @@
+# call by reference concept
+def change(mylist):
+    print("id of mylist before changing var is\t",id(mylist))
+    mylist.append(5)
+    print("id of mylist after changing var is\t",id(mylist))
+
+mainlist=[1,2,3,4]
+print("Mainlist before calling function\t",mainlist)
+print("id of mainlist is\t",id(mainlist))
+
+change(mainlist)
+print("Mainlist after calling function\t",mainlist)
+

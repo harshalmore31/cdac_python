@@ -1,0 +1,9 @@
+def disp1():
+    print("inside disp1")
+    return disp2
+
+def disp2():
+    print("inside disp2")
+
+var1=disp1()
+var1()  # here "disp2()" will be called

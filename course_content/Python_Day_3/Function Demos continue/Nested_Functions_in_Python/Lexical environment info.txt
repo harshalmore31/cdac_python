@@ -1,0 +1,4 @@
+lexical scope=local scope+lexical environment of parent function [ outer function ]
+
+inner function is lexically sitting inside outer function. That means inner function will have access to the lexical environment of outer function.
+outer function is lexically sitting inside the global scope.

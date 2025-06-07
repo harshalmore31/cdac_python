@@ -1,0 +1,16 @@
+def myfun():
+    return 100 ,200,300
+
+a,b,c=myfun()
+print(a,b,c)
+
+
+def calculation(a, b):
+    return a + b, a - b
+
+# get result in tuple format
+# unpack tuple
+add, sub = calculation(40, 10)
+print(add, sub)
+
+

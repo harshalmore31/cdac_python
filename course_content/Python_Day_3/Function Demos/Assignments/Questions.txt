@@ -1,0 +1,30 @@
+1) define 3 functions "add()","modify()" and "delete()" with just a print message.
+now accept input from user as a number. if the number entered is 1, call "add()"
+if it is 2, call "modify()" if it is 3, call "delete()" [ hint: use "match... case" ]
+ 
+
+2) define a function which accepts a number and return its square.
+
+
+3) define a function which accepts character,int,string and display them.
+
+
+4) define "myfun1()" with a print statement. now define "myfun2()" which should invoke "myfun1()" function. 
+invoke myfun2()
+
+5) define a function to accept a number. This function should return 1 if a number passed is more than 0
+return -1 if a number passed is less than 0 , else it should return 0.
+
+6) define a function which accepts a character and return toggle of it. 
+
+7) define a function which accepts a string , toggle and return it.
+	[ hint :  use "swapcase()" function of string ]
+
+8) write a function to accept minimum 3 characters and maximum 5 characters. 
+ 	[ use default arguments method ]
+
+9) define a function in such a way that it can accept n number of values and print their sum. [ variable number of arguments]
+
+
+
+

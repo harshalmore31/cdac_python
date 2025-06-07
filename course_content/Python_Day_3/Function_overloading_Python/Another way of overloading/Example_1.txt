@@ -1,0 +1,41 @@
+# When a function decorated with @dispatch is called, 
+# the library inspects the arguments passed to the function 
+# and dispatches the call to the appropriate implementation 
+# based on the type and number of arguments.
+
+from multipledispatch import dispatch
+  
+#passing two parameters
+@dispatch(int,int)
+def product(first,second):
+    result = first*second
+    print(result)
+  
+#passing three parameters
+@dispatch(int,int,int)
+def product(first,second,third):
+    result  = first * second * third
+    print(result)
+  
+#you can also pass data type of any value as per requirement
+@dispatch(float,float,float)
+def product(first,second,third):
+    result  = first * second * third
+    print(result)
+  
+  
+#calling product method with 2 arguments
+product(20,4)
+product(2,3,2) 
+product(2.2,3.4,2.3) 
+
+print(type(product))
+print(product.name)
+print(product.dispatch(int,int))
+print(type(product.dispatch(int,int)))
+print(product.dispatch(float,float,float))
+print(type(product.dispatch(float,float,float)))
+print(product.dispatch(int,int,int))
+print(type(product.dispatch(int,int,int)))
+print("address of product\t",id(product))
+

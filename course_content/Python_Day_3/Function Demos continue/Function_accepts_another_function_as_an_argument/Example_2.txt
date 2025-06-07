@@ -1,0 +1,9 @@
+def main(fun):
+    fun()     #  TypeError: 'int' object is not callable, so how will you ensure that "fun" is callable or not
+    print("inside outer function")
+
+def disp():
+    print("inside disp function")
+
+temp=100
+main(temp)  

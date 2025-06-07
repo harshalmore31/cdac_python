@@ -1,0 +1,33 @@
+# This is a single-line comment
+# It explains something in the code below
+
+"""
+ This is a multi-line comment style (sort of)
+It's not officially a "comment" — just a multi-line string.
+But when placed outside functions/classes, Python just ignores it.
+Often used for block comments if not assigned or returned.
+"""
+
+
+def greet(name):
+    """
+    This is a docstring
+    It describes what the function does.
+
+    Parameters:
+        name (str): The name of the person to greet.
+
+    Returns:
+        None
+    """
+
+    # This prints the greeting message
+
+    print(f"Hello, {name}!")
+
+
+# Calling the function
+greet("Nitin")
+
+# Accessing the docstring
+print(greet.__doc__)

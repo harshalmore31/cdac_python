@@ -1,0 +1,10 @@
+num1=100
+def first():
+	num2=200
+	def second():
+		num3=300
+		print(num1,"\t",num2,"\t",num3)
+		print(num4)  # NameError
+	return second
+
+first()()

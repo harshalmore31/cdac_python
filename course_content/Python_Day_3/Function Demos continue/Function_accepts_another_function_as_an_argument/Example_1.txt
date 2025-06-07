@@ -1,0 +1,11 @@
+def main(fun):
+    fun()
+    print("inside caller function")
+
+def disp():
+    print("inside disp function")
+
+main(disp)
+
+
+# place the breakpoint at both the print statements,debug and check the call stack

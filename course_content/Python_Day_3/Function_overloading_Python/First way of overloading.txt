@@ -1,0 +1,10 @@
+def disp(*args):
+    print("Type of args is\t",type(args))
+    print("Arguments passed are \t",args.__len__())
+    for i in args:
+        print(i,end=" ")
+    print("\n")
+disp(10,20)
+disp(30,40,50)
+disp()
+disp("hello",100,4.5,True)

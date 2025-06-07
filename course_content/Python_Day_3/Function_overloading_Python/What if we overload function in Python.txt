@@ -1,0 +1,15 @@
+# The problem with method overloading in Python is that we may # overload the methods 
+# but can only use the latest defined method.
+
+def fun1():
+    print("fun1 with 0 arg")
+def fun1(num1):
+    print("fun1 with 1 arg")
+def fun1(num1,num2):
+    print("fun1 with 2 args")
+
+# fun1()   #  TypeError: fun1() missing 2 required positional arguments: 'num1' and 'num2'
+
+# fun1(10) #  TypeError: fun1() missing 2 required positional arguments: 'num1' and 'num2'
+
+fun1(30,40) # No problem
