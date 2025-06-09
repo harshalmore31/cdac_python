@@ -1,0 +1,20 @@
+The __init__ method is the Python equivalent of the C++ constructor in an object-oriented approach. The __init__  function is called every time an object is created from a class. The __init__ method lets the class initialize the object’s attributes and serves no other purpose. It is only used within classes. 
+
+If a Python class has no __init__ method, then creating a new instance of the class will just create an empty instance of the class. That may be completely OK. However, if the need all new instances of a class to have some values, then an __init__ method should be created.
+
+What happens when your class does not explicitly define an __init__ method?
+
+Short answer; nothing happens.
+
+Long answer;
+
+ if you have a class B, which inherits from a class A, and if B has no __init__ method defined, then the parent's (in this case, A) __init__ is invoked.
+
+
+It means that the __init__ method is inherited
+
+If you actually specified a parent class, then the __init__ of this parent class will be called
+
+If you didn't, it will use the object __init__ method, which doesn't do anything significant for you
+
+This behavior is the same as non-special methods.

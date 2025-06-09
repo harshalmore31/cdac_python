@@ -1,0 +1,1 @@
+class variable and static variables are same but class methods and static methods are not same.

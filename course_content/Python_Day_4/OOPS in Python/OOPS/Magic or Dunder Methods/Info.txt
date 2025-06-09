@@ -1,0 +1,6 @@
+Python - Magic or Dunder Methods. Magic methods in Python are the special methods that start and end with the double underscores. They are also called dunder methods. Magic methods are not meant to be invoked directly by you, but the invocation happens internally from the class on a certain action.
+For example, when you add two numbers using the + operator, internally, the __add__() method will be called.
+
+Built-in classes in Python define many magic methods. Use the dir() function to see the number of magic methods inherited by a class. For example, in order to display all the attributes and methods defined in the "int" class, give following command and check
+
+dir(int)

@@ -1,0 +1,34 @@
+"""
+When you write:
+
+num = 100
+num is a name (label) in the current namespace.
+
+It refers to an int object 100 that lives in memory
+(on the heap).
+
+The integer 100 is an immutable object of type int.
+
+"""
+
+num=100
+print(num)
+del num
+print(num)  # NameError: name 'num' is not defined
+
+"""
+when you do:
+
+del num
+
+You are removing the name "num" from the current namespace.
+
+You are not deleting the int object itself, because:
+
+Python uses reference counting and garbage collection.
+
+If no other variable refers to that int object, 
+it will be garbage collected.
+
+
+"""

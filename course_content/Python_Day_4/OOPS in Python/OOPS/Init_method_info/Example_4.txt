@@ -1,0 +1,14 @@
+class Base:
+    def __init__(self,num):
+        print("inside init method of Base")
+        super().__init__()
+        self.num=num
+    def disp(self):
+        print(self.num)
+s1=Base(60)
+s1.disp()
+print(hasattr(s1,'disp'))
+print(hasattr(s1,'__init__'))
+
+# In this example, "super().__init__()" doesn't give any error which proves that the parent class i.e. "object" class has 
+# "__init__()" method which does not take any parameter.

@@ -1,0 +1,1 @@
+A destructor method is called when all references to an object have been destroyed. In Python, the __del__() method is referred to as a destructor method. 

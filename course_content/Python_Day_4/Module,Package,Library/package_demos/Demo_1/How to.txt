@@ -1,0 +1,60 @@
+go to "D:\Python_temp"
+
+create a folder "MyPackage"
+
+go to "MyPackage" folder
+
+right click
+	open folder as pycharm community folder
+
+
+create "One.py"
+
+def disp1():
+    print("this is disp1 of One_py")
+
+
+create "Two.py"
+
+def disp2():
+    print("this is disp2 of Two_py")
+
+
+close the pycharm window.
+
+now go to "This PC"
+	right click
+		properties
+			Advanced system settings
+				environment variables
+
+	set pythonpath
+		"D:\Python_temp"
+
+now go to your normal working directory e.g.  "e:\\work"
+	right click
+		open folder as pycharm community folder
+
+[ note:- it's very imp. to restart the pycharm window once you set "pythonpath" ]
+
+create "First.py" where you would like to access "MyPackage" and invoke "disp1()" and "disp2()" of "One.py" and "Two.py" respectively.
+
+	First.py
+
+from MyPackage import One,Two      # to access "One.py" and "Two.py" modules
+
+One.disp1()
+Two.disp2()
+
+	or
+
+from MyPackage.One import *
+from MyPackage.Two import *
+
+disp1()
+disp2()
+
+
+Run this "First.py" to ensure that everything is working fine.
+
+

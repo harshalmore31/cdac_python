@@ -1,0 +1,9 @@
+class Base:
+    def __init__(self,num):
+       self.num=num
+    def disp(self):
+        print(self.num)
+s1=Base(10)
+print(s1)
+print(type(s1.__init__))
+print(type(s1.disp))

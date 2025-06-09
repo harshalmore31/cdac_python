@@ -1,0 +1,10 @@
+name = 'Sachin'
+age = 50
+
+# using format function
+
+print("My Name is {}  and I am {} years old".format(name,age))
+
+# using f_string
+
+print(f"Hello, My name is {name} and I'm {age} years old.")

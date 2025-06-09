@@ -1,0 +1,23 @@
+# instance variable/s are stored in the instance namespace which is different for different objects
+# class variable/s (also called as "static variables") are stored in class namespace which is same (shared by all the objects) for all the objects
+
+class Account:
+    rate=9                  # class variable
+    def __init__(self,accid,name,balance):
+        self.accid=accid                    # instance variable
+        self.name=name                      # instance variable
+        self.balance=balance                # instance variable
+
+c1=Account(1,"Abc",40000)
+c2=Account(2,"Xyz",70000)
+print(c1.accid,"\t",c1.name,"\t",c1.balance)
+print(c2.accid,"\t",c2.name,"\t",c2.balance)
+c1.balance=43000
+c2.balance=78000
+print(c1.accid,"\t",c1.name,"\t",c1.balance)
+print(c2.accid,"\t",c2.name,"\t",c2.balance)
+print(Account.rate,"\t",c1.rate,"\t",c2.rate)
+Account.rate=12
+print(Account.rate,"\t",c1.rate,"\t",c2.rate)
+print(id(c1.name),"\t",id(c2.name))
+print(id(Account.rate),"\t",id(c1.rate),"\t",id(c2.rate))      # proves that rate has only one copy in the memory

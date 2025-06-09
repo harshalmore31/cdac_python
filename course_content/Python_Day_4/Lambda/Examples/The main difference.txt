@@ -1,0 +1,14 @@
+def myfun(*values):
+    for i in values:
+        print(i)
+myfun(10,20,30,40)
+
+# now with lambda
+
+myfun1=lambda *values:[print (i) for i in values]    # compactness
+
+myfun1(1,2,3,4,5,6)
+
+myfun2=lambda **values1:[print (key,value) for  key,value in values1.items()]  # compactness
+
+myfun2(name="Rohit",age=36,address="Mumbai")

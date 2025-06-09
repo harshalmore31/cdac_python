@@ -1,0 +1,17 @@
+		First.py
+
+print(__name__)
+
+
+run "First.py"
+
+output:  __main__
+
+
+		Second.py
+
+import First
+
+run "Second.py"
+
+output:  First

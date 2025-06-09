@@ -1,0 +1,4 @@
+Every Python module has it’s _name_ defined and if this is ‘_main_’, it implies that the module is being run standalone by the user and we can do corresponding appropriate actions.
+If you import this script as a module in another script, the _name_ is set to the name of the script/module.
+Python files can act as either reusable modules, or as standalone programs.
+if _name_ == “main”: is used to execute some code only if the file was run directly, and not imported.

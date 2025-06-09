@@ -1,0 +1,10 @@
+class Base:
+    def disp(self):
+        print("in disp")
+s1=Base()
+s1.disp()
+print(hasattr(s1,'disp'))
+print(hasattr(s1,'__init__'))
+
+# This example proves that if you don't define "__init__" inside the class, it is always inherited from the parent class, 
+# i.e. "object" class here. Also in the absense of "__init__" method , object is created here but it is empty.

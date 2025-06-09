@@ -1,0 +1,5 @@
+in order to access "module/s" you have to give the path of 
+	the folder in which module/s are present.
+
+in order to access "package/s" you have to give the path of 
+	the folder in which that package/s are present.

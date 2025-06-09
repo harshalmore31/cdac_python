@@ -1,0 +1,10 @@
+Anonymous functions are also called lambda functions in Python because instead of declaring them with the standard def keyword, you use the lambda keyword.
+
+A lambda function is a small anonymous function.
+
+A lambda function can take any number of arguments, but can only have one expression.
+
+Syntax
+lambda arguments : expression
+
+The expression is executed and the result is returned:

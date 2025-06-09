@@ -1,0 +1,13 @@
+num=10
+name="abc"
+print("globals are\t",globals())
+
+def outer():
+    b=30
+    print("locals for outer\t",locals())
+    def inner():
+        a=15
+        print("locals for inner\t", locals())
+    inner()
+
+outer()

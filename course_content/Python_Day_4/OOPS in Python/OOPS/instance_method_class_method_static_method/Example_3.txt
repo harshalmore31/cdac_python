@@ -1,0 +1,38 @@
+
+class Account:
+    rate=9                  # class variable
+    def __init__(self,accid,name,balance):
+        self.accid=accid                   
+        self.name=name                      
+        self.balance=balance               
+    def getAccid(self):              # instance method
+        return self.accid
+    def getName(self):               # instance method
+        return self.name
+    def getBalance(self):            # instance method
+        return self.balance
+
+    @classmethod
+    def getRate(cls):
+        return cls.rate
+    
+    @staticmethod
+    def calculateEMI(no_of_years,load_amt):
+        return "calculated EMI per month"
+
+c1=Account(1,"Abc",40000)       # instance object
+c2=Account(2,"Xyz",70000)       # instance object
+
+print(c1.getAccid(),"\t",c1.getName(),"\t",c1.getBalance())
+print(c2.getAccid(),"\t",c2.getName(),"\t",c2.getBalance())
+
+print(Account.getRate())
+
+print(Account.calculateEMI(10,200000))
+print(c1.__dict__)
+temp=Account        # class object
+print(temp.__dict__)
+
+print("let's display the types of instance object (c1) and class object(temp)")
+print(type(c1))
+print(type(temp))

@@ -1,0 +1,21 @@
+1) write a function to accept a number and return its square using
+	a) normal function
+	b) lambda
+
+
+2) write a function to display "Hello World" using
+	a) normal function
+	b) lambda
+
+
+3) write a function with 2 arguments , second argument should be "default argument" and display them. Using
+	a) normal function 
+	b) lambda
+
+
+4) write a function with variable no. of arguments and display them. Using
+	a) normal function
+	b) lambda
+
+
+

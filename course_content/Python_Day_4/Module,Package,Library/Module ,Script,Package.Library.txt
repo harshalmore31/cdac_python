@@ -1,0 +1,8 @@
+script:  A script is a python file that is intended to be run directly. If you run it , it should do something. This means that scripts contain code which invokes the functions, create objects of classes and invoke their member functions.
+
+module: A module is a python file that is intended to be imported into other scripts. It consists of classes,functions and variables to be used in other files.
+
+package: It's a collection of related modules that work together to provide certain functionality. Actually package is a folder in which there are many python files exist. One of the files is "init.py" which proves that the folder is a package. 
+
+library: It's a collection of Python packages. 
+

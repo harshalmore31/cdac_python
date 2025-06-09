@@ -1,0 +1,1 @@
+Python string format() function has been introduced for handling complex string formatting more efficiently. Sometimes we want to make generalized print statements in that case instead of writing print statement every time we use the concept of formatting.

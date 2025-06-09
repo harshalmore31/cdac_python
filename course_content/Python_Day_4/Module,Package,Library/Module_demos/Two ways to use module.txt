@@ -1,0 +1,10 @@
+a) import <modulename>
+
+	modulename.function1()
+	....		function2()
+	....        function n
+
+b) from <modulename> import <functionname>
+
+	or
+from <modulename> import *

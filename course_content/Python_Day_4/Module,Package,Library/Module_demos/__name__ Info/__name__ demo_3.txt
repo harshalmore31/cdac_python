@@ -1,0 +1,31 @@
+			First.py
+
+def add(a,b):
+    return a+b
+
+if __name__== '__main__' : print(add(10, 20))
+print(__name__)
+
+
+
+			Run "First.py"
+
+output:
+	30
+	__main__
+
+
+
+
+			Second.py
+
+import First
+print(First.add(3, 4))
+
+
+			Run "Second.py"
+
+output:
+
+	First
+	7

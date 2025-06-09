@@ -1,0 +1,14 @@
+class First:
+    var=20  # class variable
+
+f1=First()
+f2=First()
+
+print(First.var)        # highly recommended
+print(f1.var)           # not recommended
+print(f2.var)           # not recommended
+
+# proves that class variable has got only one copy in the memory
+print(id(First.var))
+print(id(f1.var))
+print(id(f2.var))

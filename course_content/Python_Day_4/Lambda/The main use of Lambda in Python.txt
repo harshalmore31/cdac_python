@@ -1,0 +1,1 @@
+The main role of the lambda function is better described in the scenarios when we use them anonymously inside another function. In Python, the lambda function can be used as an argument to the higher-order functions which accepts other functions as arguments.  

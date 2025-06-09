@@ -1,0 +1,15 @@
+from multipledispatch import dispatch
+
+class Sample:
+    @dispatch(int)
+    def __init__(self,num):
+        self.num=num
+    @dispatch(str)
+    def __init__(self,name):
+        self.name=name
+    
+
+a1=Sample(10)
+a2=Sample("Kunal")
+print(a1.num)
+print(a2.name)

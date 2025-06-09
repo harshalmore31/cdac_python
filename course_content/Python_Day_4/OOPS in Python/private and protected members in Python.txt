@@ -1,0 +1,29 @@
+How can we create private and protected members in Python?
+
+ans:-
+
+You create private members by prefixing the member name with two leading underscores (__).
+
+You create protected members by prefixing the member name with a single leading underscore (_).
+
+
+
+class A:
+    def __init__(self,a,b,c):
+        self.a=a    # public
+        self.__b=b  # private
+        self._c=c   # protected
+
+ref1=A(10,20,30)
+print(ref1.a)
+# print(ref1.b) # AttributeError: 'A' object has no attribute 'b'
+# print(ref1.c) # AttributeError: 'A' object has no attribute 'c'
+print(ref1._A__b)  # now it's possible
+print(ref1._c)    #  # now it's possible
+
+
+
+
+
+
+

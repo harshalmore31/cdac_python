@@ -1,0 +1,14 @@
+from multipledispatch import dispatch
+
+class First:
+    @dispatch(int)
+    def disp(self,val):
+        print(val)
+    @dispatch(str)
+    def disp(self,val):
+        print(val)
+
+f1=First()
+f1.disp("hello")
+f1.disp(100)
+    

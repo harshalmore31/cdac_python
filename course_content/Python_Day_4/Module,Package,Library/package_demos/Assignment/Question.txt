@@ -1,0 +1,10 @@
+create a package "special"
+	inside this package create two modules
+a) Arithmetic.py
+	with 
+		add(),multipy(),subtract() functions which take 2 parameters , perform the respective action and return the result.
+b) Display.py
+	wish() functions which accepts a name (as an  argument) and return the welcome message.
+
+now create "App.py" somewhere in which invoke all the above functions from "Arithmetic.py" and "Display.py"
+

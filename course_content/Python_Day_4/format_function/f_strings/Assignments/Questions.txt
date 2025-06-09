@@ -1,0 +1,7 @@
+1) Write a program that asks the user for their name and age, and prints the output in the following format using an f-string:
+
+"Hello, <name>. You are <age> years old."
+
+2) Ask the user for the item name, quantity, and price per item. Use an f-string to display:
+
+"You bought <quantity> <item_name>(s) at ₹<price> each. Total cost is ₹<total>."

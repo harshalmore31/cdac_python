@@ -1,0 +1,11 @@
+""" def double(x):
+  return x*2
+  
+my_list = [1, 2, 3, 4, 5, 6]
+new_list = list(map(double, my_list))
+print(new_list) # [2, 4, 6, 8, 10, 12] """
+
+my_list = [1, 2, 3, 4, 5, 6]
+new_list = list(map(lambda x: x*2, my_list))
+print(new_list) # [2, 4, 6, 8, 10, 12]
+
