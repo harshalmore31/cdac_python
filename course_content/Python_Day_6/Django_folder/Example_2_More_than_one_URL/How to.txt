@@ -1,0 +1,89 @@
+replace the code of "urls.py" of "firstapp" with the following code:
+
+so , your "urls.py" inside "firstapp" should look like
+
+from django.contrib import admin
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.home,name='home page'),
+    path('Special',views.special,name='special page')
+]
+
+the meaning of above entries is:
+	 path('',views.home,name='home page')
+on home page visit, i.e. http://localhost:8000
+	"home" function of "views.py" should be called
+
+	path('Special',views.special,name='special page')
+
+if we say,
+	http://localhost:8000/Special
+		"special" function of "views.py" should be called.
+
+
+let's go to "views.py" and define "home" and "special" functions
+
+so your "view.py" should look like:
+
+
+from django.http import HttpResponse
+
+# Create your views here.
+
+def home(request):
+    return HttpResponse("Welcome to first Django app")
+
+def special(request):
+    return HttpResponse("<b><u><i>Welcome to Special page</b></u></i>")
+
+
+
+now project "myproject" within which we have "firstapp", should know that we've created urls.
+
+so open "urls.py" of "myproject" and make changes
+
+so "urls.py" of "myproject" should look like:
+
+from django.contrib import admin
+from django.urls import path,include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',include('firstapp.urls'))
+]
+
+it's like request for anything other than "admin",
+		visit "urls.py" of "firstapp"
+
+
+now start the server
+
+on terminal type the following command:
+
+python manage.py runserver
+
+make sure you get following message:
+
+	Django version 4.2, using settings 'myproject.settings'
+
+Starting development server at http://127.0.0.1:8000/
+
+
+click this link and make sure you get following message in the browser:
+
+	Welcome to first Django app
+
+now type following inside the browser
+
+http://127.0.0.1:8000/Special
+
+and make sure u get following message:
+
+	Welcome to Special page
+
+
+
+

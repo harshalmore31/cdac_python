@@ -1,0 +1,15 @@
+database handling
+
+	a) manually writing database statements ( queries/update) through the programming language
+
+		Python - database handling using Python
+		Java  -  JDBC
+
+
+	b) ORM [Object to Relational Mapping]
+
+		Java  - Hibernate
+
+		Python - SQLAlchemy
+
+		

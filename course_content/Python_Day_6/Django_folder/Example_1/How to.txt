@@ -1,0 +1,201 @@
+First install "virtualenv" if you haven't installed before.
+
+
+go to the command prompt and give following command:
+
+	pip install virtualenv
+
+make sure it is installed successfully
+
+"virtualenv" is used to create your virtual environment.
+
+
+
+Create virtual environment
+
+go to the folder where you want to create virtual environment
+
+e.g. in my case it is
+e:\\temp
+
+give following command :
+
+e:\temp>virtualenv myenv (to create virtual environment)
+
+here "myenv" is the name of virtual environment to be created inside "temp" folder.
+check inside "temp" directory whether "myenv" folder has been created or not
+
+go to pycharm and close your currently running project.
+
+restart pycharm
+
+click on "New Project" button
+
+	from "Location", select
+			E:\temp\myenv
+
+from the available radio buttons , select
+	New Environment Using - Virtualenv
+
+don't select "Create main.py welcome script"
+
+	click on "Create" button to create the project.
+
+if you get "Directory is not empty" dialog box,
+	click on "Create from existing Sources" button
+
+make sure it creates a project successfully.
+
+now click on "Terminal" tab from the bottom window
+
+change the directory to 
+	e:\\temp\\myenv
+
+now let's install Django 4.2 inside our virtual environment. In order to do that first we have to activate our virtual environment
+
+To install any library (like Django) into a virtual environment, you must first activate that environment. This ensures that the library is installed specifically in that isolated environment, avoiding conflicts with other projects or the global installation.
+
+now let's activate (myenv) our virtual environment
+
+e:\temp\myenv>  scripts\activate  (to activate the environment)
+	if this command gives you error"
+
+	"cannot be loaded because running scripts is disabled on this system"
+
+to solve this error,give following command :
+
+ e:\temp\myenv> Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
+
+and then try again
+	e:\temp\myenv> scripts\activate
+
+make sure you can see following:
+(myenv) PS e:\temp\myenv> 
+
+Once the virtual environment is activated, the name of your virtual environment ("myenv" in our case)will appear on the left side of the terminal. This will let you know that the virtual environment is currently active.
+
+
+once virtual environment gets activated, install Django 4.2 by giving following command
+
+(myenv) PS e:\temp\myenv>pip install Django==4.2
+
+it will take some time. make sure Django 4.2 is installed successfully inside myenv
+
+now check again with "pip list" command :
+
+(myenv) PS e:\temp\myenv> pip list
+
+this time you will notice "Django 4.2" inside myenv folder.
+
+
+
+now let's create a Django project 
+create a project:
+
+(myenv) PS e:\temp\myenv> django-admin startproject myproject
+
+notice on the left side project view, "myproject" gets created inside "myenv"
+
+
+make sure "myproject" project has been created inside "myenv" ( this can be checked inside VS code itself)
+
+now inside this "myproject" we'll create our first app or application. One application atleast is required.
+
+go to "myproject"
+
+(myenv) PS E:\work\myenv> cd myproject
+(myenv) PS E:\work\myenv\myproject> 
+
+now create app inside this
+
+(myenv) PS E:\work\myenv\myproject> django-admin startapp firstapp
+
+make sure inside "myproject", "firstapp" gets created
+
+
+
+right click on "firstapp"
+	new python file
+		urls.py
+
+blank "urls.py" file will get created. Now copy the contents of "urls.py" file from "myproject" folder and paste it in "urls.py" of "firstapp" project.
+
+inside "urlpatterns" of "urls.py" file of "firstapp" 
+
+path=
+	which has got 3 parameters
+	1) the endpoint of the page
+		if it is blank that means we want to display "Hello World" on the home page itself.
+	2) on the execution of the app, which function should be called
+		e.g. if you mention "views.home"
+	it means definition of "home" function you will provide in "views.py" file.
+
+if you get error for "views" ,
+	from . import views
+
+	3) name 
+		which is name of page e.g.  home page
+
+so , your "urls.py" inside "firstapp" should look like
+
+from django.contrib import admin
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.home,name='home page')
+]
+
+
+let's go to "views.py" and define "home" function
+
+contents of "views.py" file:
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+
+def home(request):
+    return HttpResponse("Welcome to first Django app")
+
+
+
+now project "myproject" within which we have "firstapp", should know that we've created url.
+
+so open "urls.py" of "myproject" and include the url we have given inside "urls.py" of "firstapp"
+
+so "urls.py" of "myproject" should look like:
+
+from django.contrib import admin
+from django.urls import path,include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',include('firstapp.urls'))
+]
+
+
+now start the server
+
+on pycharm terminal go to "e:\temp\myenv\myproject>" and type the following command:
+
+python manage.py runserver
+
+make sure you get following message:
+
+	Django version 4.2, using settings 'a.settings'
+Starting development server at http://127.0.0.1:8000/
+
+
+click this link and make sure you get following message in the browser:
+
+	Welcome to first Django app
+
+
+
+
+
+
+

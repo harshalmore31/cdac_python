@@ -1,0 +1,11 @@
+if you get
+
+ModuleNotFoundError: No module named 'mysql'
+
+go to your environment folder on the terminal
+
+(myenv) PS E:\work\myenv> 
+
+and give following command
+
+(myenv) PS E:\work\myenv> pip install mysql-connector-python

@@ -1,0 +1,8 @@
+write a Django application which displays
+	"view.html" at the startup(when you hit "http://localhost:8000")
+
+this "view.html" should display hyperlink
+	view persons
+
+on click of this link Django application should fire database query, gets all the records , save them inside the list and return the list which can be visible on the browser.
+ 

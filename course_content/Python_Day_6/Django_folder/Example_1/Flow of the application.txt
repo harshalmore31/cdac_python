@@ -1,0 +1,26 @@
+After starting the server , when you hit following url on the browser
+
+http://127.0.0.1:8000/
+
+control goes to
+
+	"urls.py"  of myproject
+
+where it is written
+	
+	path('',include('firstapp.urls'))
+
+The entry path('', include('firstapp.urls')) means that all requests that don't match the /admin/ path will be directed to firstapp/urls.py
+
+so 
+	path('',include('firstapp.urls'))
+
+means that go to "urls.py" of "firstapp"
+
+inside "urls.py" of "firstapp", following entry is written
+
+	path('',views.home,name='home page')
+
+it means on the home page visit (' '), go to "views.py" and invoke "home" function by passing "request" object
+
+now control goes to "home" function of "views.py" and execute the code which is written inside it , which gives us response on the browser page.

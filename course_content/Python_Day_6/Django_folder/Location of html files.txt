@@ -1,0 +1,1 @@
+html files must be inside "templates" folder.

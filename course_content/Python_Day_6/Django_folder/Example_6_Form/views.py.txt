@@ -1,0 +1,14 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+def home_view(request):
+     return render(request, "home.html")
+
+def result(request):
+    name=request.POST.get('name')
+    address = request.POST.get('address')
+    age = request.POST.get('age')
+    return HttpResponse(name+"   "+address+"    "+str(age))
+    
+   
