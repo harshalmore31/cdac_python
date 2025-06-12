@@ -1,0 +1,15 @@
+file = open('myfile.json', 'r')
+try:
+    print(file.read())
+finally:
+    file.close()
+
+
+
+
+file=open("trial.txt",'w')
+
+try:
+    file.write("Welcome to file handling world")
+finally:
+    file.close()
