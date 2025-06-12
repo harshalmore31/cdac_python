@@ -1,0 +1,13 @@
+<form action = "go" method = "post">
+   {% csrf_token %} 
+   Enter name:
+    <input type="text" name="name">
+    <br>
+    Enter address:
+    <input type="text" name="address">
+    <br>
+    Enter age:
+    <input type="number" name="age">
+    <br><br>
+    <input type="submit" value=Submit">
+</form>

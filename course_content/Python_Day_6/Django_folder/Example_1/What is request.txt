@@ -1,0 +1,15 @@
+In Django, a "request" refers to an object that represents the incoming HTTP request made by a client to a web server. It contains metadata about the request, including information such as:
+
+HTTP Method: The type of request (GET, POST, PUT, DELETE, etc.).
+
+URL: The requested URL path.
+
+Headers: Information sent by the client, such as content type, user-agent, and cookies.
+
+Query Parameters: Any data sent in the URL (e.g., ?module=python).
+
+Body Data: Data sent in the body of the request, typically with POST requests.
+
+In Django, the HttpRequest object is created for each incoming request. You can access it in your view functions or class-based views, allowing you to process the request data and generate an appropriate response.
+
+HttpResponse in Django is a class that represents an HTTP response returned from a view. It allows you to send data back to the client (like a web browser) in response to an HTTP request.

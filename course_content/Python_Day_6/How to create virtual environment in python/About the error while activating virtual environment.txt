@@ -1,0 +1,12 @@
+scripts\activate  (to activate the environment)
+	this command by default will give you error
+
+"cannot be loaded because running scripts is disabled on this system"
+
+to solve this error,
+
+12) E:\work\myenv> Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
+E:\work\myenv> scripts\activate
+
+13) make sure you can see following:
+(myenv) PS E:\work\myenv> 

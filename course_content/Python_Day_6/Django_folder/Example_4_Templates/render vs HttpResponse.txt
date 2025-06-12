@@ -1,0 +1,1 @@
+render is used to for what the name already indicates: to render a template file e.g. HTML. render is basically a simple wrapper around a HttpResponse which renders a template.

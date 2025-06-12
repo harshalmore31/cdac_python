@@ -1,0 +1,1 @@
+HttpResponse in Django is a class that represents an HTTP response returned from a view. It allows you to send data back to the client (like a web browser) in response to an HTTP request.

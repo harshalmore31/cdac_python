@@ -1,0 +1,25 @@
+just go and check "myproject"  folder. you'll get 4 files:
+
+__init__.py
+asgi.py
+settings.py
+urls.py
+wsgi.py
+
+Whenever you create app , you will always get these 4 files.
+
+manage.py file
+	to provide interaction between different apps or in order to manage the entire project. Here our project name is "myproject" in which we'll create different applications or apps. In order to have interactions between these applications , manage.py file is used.
+
+inside "myproject" folder, 
+	settings.py file
+		this file contains database related, password related information.
+	urls.py file
+		urls used to map our application will come here.
+	wsgi.py file
+		it works like an entry point for compatible servers.
+	__init__.py file
+		it works as a package for the project.
+		
+
+
