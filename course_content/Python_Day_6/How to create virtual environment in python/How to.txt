@@ -1,0 +1,84 @@
+your project location should be inside 
+
+	C:\Users\Nitin\PycharmProjects
+
+
+
+main location of "site-packages" where all libraries are by default downloaded is:
+
+
+"C:\Users\Nitin\AppData\Local\Programs\Python\Python310\Lib\site-packages"
+
+
+if you have installed a package and still you get package not found error, always select "existing" as an option and select interpreter from 
+
+"C:\Users\Sriram\AppData\Local\Programs\Python\Python310\python.exe"
+
+How to create virtual environment?
+
+pip install virtualenv
+
+[ virtualenv is used to manage Python packages for different projects. Using virtualenv allows you to avoid installing Python packages globally which could break system tools or other projects.]
+
+
+
+pip install virtualenv
+
+
+
+if you want to create a virtual environment , go to your project location on the terminal and type:
+
+C:\Users\nitin\PycharmProjects> python -m venv myenv
+		or
+ py -m venv myenv
+
+	or
+ python3 -m venv myenv
+
+
+	this command will create "myenv" folder inside "C:\Users\Sriram\PycharmProjects"
+	inside "myenv" folder you will get
+		"Lib\site-packages"
+	this "site-packages" is the folder where your environment (myenv) specific packages only will be stored. 
+i.e. [C:\Users\nitin\PycharmProjects\myenv\Lib\site-packages]
+
+so, the "site-packages" folder which is available to all the projects
+	i.e.
+	C:\Users\nitin\AppData\Local\Programs\Python\Python310\Lib\site-packages
+
+is different and "site-packages" which is specific to a particular virtual environment  i.e.
+	C:\Users\nitin\PycharmProjects\myenv\Lib\site-packages
+
+
+
+if you want to list out the packages installed for your project, go to your project folder on the terminal and give following command
+
+C:\Users\Sriram\PycharmProjects>pip list
+
+it will list out all the packages which have been installed globally.
+
+
+now if you want to activate your virtual environment, give following command
+
+C:\Users\nitin\PycharmProjects> cd myenv
+it will change to 
+C:\Users\nitin\PycharmProjects\myenv>
+
+now give command
+C:\Users\nitin\PycharmProjects\myenv> Scripts\activate
+
+make sure command prompt changes to :
+
+(myenv) C:\Users\nitin\PycharmProjects\myenv>
+	this means that we've activated "myenv" virtual environment
+
+now list out how many packages have been installed inside your virtual environment (myenv)
+
+(myenv) C:\Users\Sriram\PycharmProjects\myenv> pip list
+
+to deactivate the virtual environment give command
+	deactivate
+
+
+
+

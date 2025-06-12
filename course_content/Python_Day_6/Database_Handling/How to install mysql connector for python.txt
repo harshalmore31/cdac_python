@@ -1,0 +1,5 @@
+How to install MySQL Connector for Python
+
+open shell command and give following command
+
+		pip install mysql-connector-python

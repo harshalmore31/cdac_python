@@ -1,0 +1,15 @@
+create a table employee with
+	id primary key ,auto increment,name,desig,salary
+
+
+Django application
+	welcome.html
+		two links 
+			add employee
+			view employee
+
+	on click of "add employee" link, control should go to "empadd.html" which accepts name,desig and salary
+
+	on submit ,record should be saved in the database
+
+	on click of "view employee" , all the records added so far in the table should be displayed.

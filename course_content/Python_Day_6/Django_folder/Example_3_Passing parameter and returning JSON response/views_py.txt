@@ -1,0 +1,10 @@
+from django.http import HttpResponse, JsonResponse
+
+
+# Create your views here.
+
+def vote(request,name,age):
+    if age<18:
+        return JsonResponse({'message': 'You cannot vote'})
+    else:
+        return JsonResponse({'message': 'Most welcome for voting'})

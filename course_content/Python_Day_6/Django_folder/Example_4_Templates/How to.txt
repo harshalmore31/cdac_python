@@ -1,0 +1,43 @@
+inside "views.py" file we define functions to return the response on the browser. We write different functions for different URLs.
+Now suppose we want to implement some html tags e.g. header, bold ,italic fonts etc. on the response body , one way is that we can write them inside "views.py" file like :
+
+return HttpResponse("<b><u>Welcome to our site</b></u>")
+
+but this is not feasible as we may have so many URLs and we would like to share similar formats ( header values, bold ,italic etc) across all the response bodies. Moreover tomorrow if there is a need to change header value or any style , we'll have to modify all the functions of "views.py" file which will give us maintenance drawback.
+
+in order to solve this problem we should use something called as "templates" in Django. For this, 
+
+ go to "myproject" directory (in which "manage.py" file is there)
+	i.e.  E:\temp\myenv\myproject
+
+ create new directory inside "myproject", 
+	e.g. "templates"
+
+go to pycharm
+
+right click on "templates" from the left side project view
+
+	create 
+		 html file
+			myhtml.html
+
+contents of "myhtml.html"
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Welcome to home page</h1>
+<p>My first Html Page</p>
+
+</body>
+</html>
+
+
+go to "settings.py" and make following changes
+
+	inside "Templates" you need to have this:
+
+  'DIRS': ['templates'],
+
+start the server and make sure you get html contents on the browser.

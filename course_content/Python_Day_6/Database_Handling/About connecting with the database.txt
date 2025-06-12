@@ -1,0 +1,13 @@
+In order to connect to a particular database, we need a driver software for that database. That driver we get through a particular software
+
+e.g. in order to connect to MySQL
+		pip install mysql-connector-driver
+
+	in order to connect to Oracle
+		pip install oracledb
+
+	in order to connect to SQL Server
+		pip install pyodbc
+
+
+The API to communicate with the database remains same i.e. connect() , cursor, execute(),executeMany(), fetchAll, callProc() etc.
