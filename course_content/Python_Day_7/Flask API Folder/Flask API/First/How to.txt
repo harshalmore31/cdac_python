@@ -1,0 +1,13 @@
+install "Flask" inside pycharm
+
+then write "Example_1"
+
+run it
+
+make sure server starts  
+
+go to browser and type
+
+http://127.0.0.1:5000/books
+
+make sure you get the output inside the browser.

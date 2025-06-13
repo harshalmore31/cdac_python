@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask API Example</title>
+</head>
+<body>
+    <h1>List of Persons</h1>
+    <ul>
+    {% for person in data %}
+        <li>{{ person }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

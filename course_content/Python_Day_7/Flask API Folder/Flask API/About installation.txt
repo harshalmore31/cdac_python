@@ -1,0 +1,3 @@
+install "Flask" inside pycharm
+
+pip install Flask

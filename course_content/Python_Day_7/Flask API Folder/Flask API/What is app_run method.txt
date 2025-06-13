@@ -1,0 +1,10 @@
+app.run()
+ This method starts the Flask development server to handle incoming requests. By default, it listens on localhost (127.0.0.1) on port 5000. However, you can specify the host and port as arguments to this method if you want to run the server on a different host or port.
+
+e.g
+
+app.run(host='hostname', port=some port no.)
+
+debug=True
+
+ When debug is set to True, it enables the debug mode in Flask. Debug mode provides helpful features like automatic reloading of the server when code changes are detected, a debugger console in the browser in case of errors, and more detailed error messages. 
