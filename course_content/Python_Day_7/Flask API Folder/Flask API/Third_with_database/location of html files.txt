@@ -1,0 +1,7 @@
+inside "templates" folder which must be inside your project.
+
+right click on the project name 
+	new 
+		directory
+			templates
+

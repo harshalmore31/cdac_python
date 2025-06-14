@@ -1,0 +1,7 @@
+go to "pythondb1" database
+
+mysql> create table person(id int(3) primary key auto_increment,name varchar(20),age int(2) , address varchar(30));
+Query OK, 0 rows affected, 2 warnings (0.87 sec)
+
+
+also insert 3/4 records

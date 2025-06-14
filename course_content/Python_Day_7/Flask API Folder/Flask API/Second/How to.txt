@@ -1,0 +1,23 @@
+install "Flask" inside pycharm
+
+create "home.html"
+store it inside "templates" folder
+
+then write "First.py"
+
+and 
+run it
+
+make sure server starts 
+
+go to browser and type
+
+http://127.0.0.1:5000
+
+make sure you get the "home.html"
+	with the link "Go to Books page"
+
+on click of this link
+	you will be taken to 
+			http://127.0.0.1:5000/books
+	page where you can see the books displayed.

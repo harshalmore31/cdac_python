@@ -1,0 +1,28 @@
+from flask import Flask,render_template
+import mysql.connector as m
+
+# database connectivity
+
+mydatabase=m.connect(host="localhost",user="root",password="root",database="pythondb1")
+app=Flask(__name__)
+cursor=mydatabase.cursor()
+
+
+
+@app.route("/",methods=['GET'])
+def getHome():
+    print("Welcome Home")
+    return render_template('home.html')
+
+
+@app.route("/persons",methods=['GET'])
+def getPersons():
+    query = "select * from person"
+    cursor.execute(query)
+    result = cursor.fetchall()
+    print(result)
+    return render_template('welcome.html', data=result)
+
+
+if __name__=='__main__':
+    app.run(debug=True)
